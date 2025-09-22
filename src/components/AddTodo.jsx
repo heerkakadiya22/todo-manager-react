@@ -1,3 +1,4 @@
+// src/components/AddTodo.jsx
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../utils/todoSlice";
@@ -14,8 +15,13 @@ const AddTodo = () => {
   };
 
   return (
-    <div>
-      <input value={text} onChange={(e) => setText(e.target.value)} />
+    <div className="add-todo">
+      <input
+        type="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Add new todo..."
+      />
       <button onClick={handleAdd}>Add</button>
     </div>
   );
